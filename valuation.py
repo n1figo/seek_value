@@ -16,14 +16,15 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.action_chains import ActionChains
 # import pyperclip, pyautogui
-
-
-# it
-
-## 
 import pandas as pd
 import numpy as np
 import undetected_chromedriver as uc
+import subprocess
+
+from selenium.webdriver.firefox.service import Service as FirefoxService
+from webdriver_manager.firefox import GeckoDriverManager
+
+driver = webdriver.Firefox(service=FirefoxService(GeckoDriverManager().install()))
 
 # options = webdriver.ChromeOptions()
 # options.add_argument('window-size=1920,1080')
@@ -37,9 +38,30 @@ import undetected_chromedriver as uc
 # url = input('url 을 입력하세요: ') 
 url = 'https://seekingalpha.com/symbol/BA/earnings/estimates'
 
-driver = uc.Chrome()
+# driver = uc.Chrome()
+# subprocess.Popen(r'C:\Program Files\Google\Chrome\Application\chrome.exe --remote-debugging-port=9222 --user-data-dir="C:\chromeCookie"')
 
-# driver = webdriver.Firefox(ChromeDriverManager().install(), options= options)
+# option = Options()
+# option.add_experimental_option("debuggerAddress", "127.0.0.1:9222")
+# driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=option)
+# driver.maximize_window()
+# driver.get(url)
+
+# # gecko driver 폴더 생성
+# if os.path.isdir('./geckodriver'):
+#     pass
+# else:
+#     os.mkdir('./geckodriver')
+
+# path = './geckodriver/geckodriver.exe'
+# s = Service(path)
+# driver = webdriver.Firefox(service=s)
+
+
+# driver = webdriver.Firefox(executable_path='./geckodriver', options= options)
+# driver = webdriver.Firefox(executable_path=path)
+# driver = webdriver.Firefox(executable_path='C:/seek_value/geckodriver')
+
 # driver = webdriver.Chrome(ChromeDriverManager().install(), options= options)
 driver.get(url)
 

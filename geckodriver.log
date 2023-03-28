@@ -1,0 +1,83 @@
+1679979708676	geckodriver	INFO	Listening on 127.0.0.1:58839
+1679980553503	geckodriver	INFO	Listening on 127.0.0.1:59276
+1679980589871	geckodriver	INFO	Listening on 127.0.0.1:59289
+1679981000768	geckodriver	INFO	Listening on 127.0.0.1:59622
+1679981003792	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "59623" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\kbins\\AppData\\Local\\Temp\\rust_mozprofileROBoTm"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1679981004583	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1679981004590	Marionette	INFO	Listening on port 59631
+Read port: 59631
+WebDriver BiDi listening on ws://127.0.0.1:59623
+1679981004831	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\kbins\\AppData\\Local\\Temp\\rust_mozprofileROBoTm\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:59623/devtools/browser/124b162a-ea56-4762-a8c4-af9960a9f941
+1679981016091	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1679981016100	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1679981016110	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1679981016114	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1679981016117	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1679981016122	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1679981016127	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1679981016131	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1679981016149	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1679981016154	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+console.error: (new TypeError("lazy.AsyncShutdown.profileBeforeChange is undefined", "resource://services-settings/Database.jsm", 603))
+1679981145812	geckodriver	INFO	Listening on 127.0.0.1:59794
+1679981148836	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "59795" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\kbins\\AppData\\Local\\Temp\\rust_mozprofilezmUCqq"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1679981149580	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1679981149586	Marionette	INFO	Listening on port 59802
+Read port: 59802
+WebDriver BiDi listening on ws://127.0.0.1:59795
+1679981149812	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\kbins\\AppData\\Local\\Temp\\rust_mozprofilezmUCqq\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:59795/devtools/browser/c2bfb41c-93a5-4da5-ad49-a7bed78a9faa
+1679981160210	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1679981160214	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1679981160219	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1679981160225	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1679981160230	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1679981160235	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1679981160253	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1679981160259	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1679981160267	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1679981160273	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.google.com."
+JavaScript warning: https://pagead2.googlesyndication.com/bg/5ZLoQB_z02QzB_hHqtk5fVBr8jKba2eTnMK3sia1eD8.js line 2 > eval line 4458 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1679981321002	Marionette	INFO	Stopped listening on port 59802
+Dynamically enable window occlusion 1
+1679981687866	geckodriver	INFO	Listening on 127.0.0.1:60049
+1679981690921	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "60050" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\kbins\\AppData\\Local\\Temp\\rust_mozprofileW7UwxM"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1679981691698	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1679981691705	Marionette	INFO	Listening on port 60057
+Read port: 60057
+WebDriver BiDi listening on ws://127.0.0.1:60050
+1679981691962	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\kbins\\AppData\\Local\\Temp\\rust_mozprofileW7UwxM\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:60050/devtools/browser/8c435d6c-b363-4ed4-a5bd-846c7dc0b94b
+1679981702472	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1679981702481	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1679981702487	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1679981702497	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1679981702501	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1679981702505	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1679981702510	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1679981702516	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1679981702522	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1679981702535	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+console.error: (new TypeError("lazy.AsyncShutdown.profileBeforeChange is undefined", "resource://services-settings/Database.jsm", 603))
+1679981875896	Marionette	INFO	Stopped listening on port 60057
+Dynamically enable window occlusion 1
