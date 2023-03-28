@@ -30,12 +30,7 @@ from webdriver_manager.firefox import GeckoDriverManager
 
 options = webdriver.ChromeOptions()
 options.add_argument('window-size=1920,1080')
-options.add_argument("--headless")
-
-# driver = webdriver.Chrome('chromedriver.exe', options=options)
-#driver = webdriver.Chrome('chromedriver.exe', options=options)
-
-# url = input('url 을 입력하세요: ') 
+# options.add_argument("--headless") 
 
 # url = input('url 을 입력하세요: ') 
 url = 'https://seekingalpha.com/symbol/BA/earnings/estimates'
@@ -60,6 +55,7 @@ signin_xpath = '/html/body/div[2]/div/div[1]/header/nav/div[1]/div/div[2]/button
 signin_button = driver.find_element(By.XPATH, signin_xpath)
 actions = webdriver.ActionChains(driver).move_to_element(signin_button).click(on_element = None)
 
+
 # 체인을 실행합니다.
 actions.perform()
 
@@ -68,8 +64,21 @@ print('클릭을 눌렀습니다.')
 time.sleep(5)
 
 
-# # 다른계정으로 로그인 버튼 누르기
+# 구글로그인 버튼 누르기
 
+# # 구글로그인 계정 누르기
+google_acc_xpath = '/html/body/div[2]/div/div[2]/div/div[2]/div/div[2]/div[1]/button'
+google_signin_button = driver.find_element(By.XPATH, google_acc_xpath)
+actions = webdriver.ActionChains(driver).move_to_element(google_signin_button).click(on_element = None)
+# 체인을 실행합니다.
+actions.perform()
+# actions
+print('구글 로그인 버튼을 눌렀습니다.')
+time.sleep(2)
+
+
+
+# 다른계정으로 로그인 버튼 누르기
 differ_acc_xpath = '/html/body/div[1]/div[1]/div[2]/div/div[2]/div/div/div[2]/div/div[1]/div/form/span/section/div/div/div/div/ul/li[2]/div/div/div[2]'
 differ_signin_button = driver.find_element(By.XPATH, differ_acc_xpath)
 actions = webdriver.ActionChains(driver).move_to_element(differ_signin_button).click(on_element = None)
