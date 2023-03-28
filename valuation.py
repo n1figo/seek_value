@@ -3,6 +3,8 @@
 ############
 
 # pip install undetected-chromedriver
+# pip install pyperclip
+# pyautogui
 
 import os, time
 from selenium import webdriver
@@ -15,20 +17,20 @@ from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.action_chains import ActionChains
-# import pyperclip, pyautogui
+import pyperclip, pyautogui
 import pandas as pd
 import numpy as np
 import undetected_chromedriver as uc
-import subprocess
+
 
 from selenium.webdriver.firefox.service import Service as FirefoxService
 from webdriver_manager.firefox import GeckoDriverManager
 
-driver = webdriver.Firefox(service=FirefoxService(GeckoDriverManager().install()))
 
-# options = webdriver.ChromeOptions()
-# options.add_argument('window-size=1920,1080')
-# options.add_argument("--headless")
+
+options = webdriver.ChromeOptions()
+options.add_argument('window-size=1920,1080')
+options.add_argument("--headless")
 
 # driver = webdriver.Chrome('chromedriver.exe', options=options)
 #driver = webdriver.Chrome('chromedriver.exe', options=options)
@@ -47,22 +49,7 @@ url = 'https://seekingalpha.com/symbol/BA/earnings/estimates'
 # driver.maximize_window()
 # driver.get(url)
 
-# # gecko driver 폴더 생성
-# if os.path.isdir('./geckodriver'):
-#     pass
-# else:
-#     os.mkdir('./geckodriver')
-
-# path = './geckodriver/geckodriver.exe'
-# s = Service(path)
-# driver = webdriver.Firefox(service=s)
-
-
-# driver = webdriver.Firefox(executable_path='./geckodriver', options= options)
-# driver = webdriver.Firefox(executable_path=path)
-# driver = webdriver.Firefox(executable_path='C:/seek_value/geckodriver')
-
-# driver = webdriver.Chrome(ChromeDriverManager().install(), options= options)
+driver = webdriver.Chrome(ChromeDriverManager().install(), options= options)
 driver.get(url)
 
 time.sleep(3)
@@ -78,19 +65,59 @@ actions.perform()
 
 # actions
 print('클릭을 눌렀습니다.')
-time.sleep(2)
+time.sleep(5)
 
 
-# # 구글로그인 계정 누르기
-google_acc_xpath = '/html/body/div[2]/div/div[2]/div/div[2]/div/div[2]/div[1]/button'
-google_signin_button = driver.find_element(By.XPATH, google_acc_xpath)
-actions = webdriver.ActionChains(driver).move_to_element(google_signin_button).click(on_element = None)
+# # 다른계정으로 로그인 버튼 누르기
+
+differ_acc_xpath = '/html/body/div[1]/div[1]/div[2]/div/div[2]/div/div/div[2]/div/div[1]/div/form/span/section/div/div/div/div/ul/li[2]/div/div/div[2]'
+differ_signin_button = driver.find_element(By.XPATH, differ_acc_xpath)
+actions = webdriver.ActionChains(driver).move_to_element(differ_signin_button).click(on_element = None)
 # 체인을 실행합니다.
 actions.perform()
 
 # actions
-print('구글 로그인 버튼을 눌렀습니다.')
+print('다른 계정으로 로그인 버튼을 눌렀습니다.')
+time.sleep(5)
+
+
+#######################################
+# id/pw 입력
+
+
+user_id = 'n3figo@gmail.com'
+user_pw = 'Romeo123'
+
+
+# /html/body/div[1]/div[2]/div/div[1]/form/ul/li/div/div[1]/div[1]/input
+id = '/html/body/div[1]/div[1]/div[2]/div/div[2]/div/div/div[2]/div/div[1]/div/form/span/section/div/div/div[1]/div/div[1]/div/div[1]/input'
+driver.find_element(By.XPATH, id).click()
+pyperclip.copy(user_id)
+driver.find_element(By.XPATH, id).send_keys(Keys.CONTROL,'v')
 time.sleep(2)
+
+# 다음버튼 클릭 
+next_button = '/html/body/div[1]/div[1]/div[2]/div/div[2]/div/div/div[2]/div/div[2]/div/div[1]/div/div/button/span'
+driver.find_element(By.XPATH, next_button).click()
+
+# pw 입력
+time.sleep(3)
+pw = '/html/body/div[1]/div[1]/div[2]/div/div[2]/div/div/div[2]/div/div[1]/div/form/span/section/div/div/div[2]/div[1]/div/div/div/div/div[1]/div/div[1]/input'
+driver.find_element(By.XPATH, pw).click()
+pyperclip.copy(user_pw)
+driver.find_element(By.XPATH, pw).send_keys(Keys.CONTROL,'v')
+
+# 다음버튼 클릭 
+next_button_2 = '/html/body/div[1]/div[1]/div[2]/div/div[2]/div/div/div[2]/div/div[2]/div/div[1]/div/div/button/span'
+driver.find_element(By.XPATH, next_button_2).click()
+
+wait = WebDriverWait(driver, 30)
+time.sleep(5)
+
+print("="*50)
+print("로그인에 성공하였습니다.")
+print("="*50)
+
 
 
 print('-'*50)
